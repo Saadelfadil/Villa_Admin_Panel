@@ -30,36 +30,52 @@ else
 <html>
     <head>
     <title> Edit Villa</title>
-        <meta charset="utf-8">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="container">
-		<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 edit_information">
-			<form action=""  method="POST">	
-				<h3 class="text-center">Edit Villa</h3>
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label class="profile_details_text">Villa Name:</label>
-							<input type="text" name="villa_name" class="form-control" value="<?= $villa_name?>" required >
+        <!-- <div class="container">
+			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 edit_information">
+				<form action=""  method="POST">	
+					<h3 class="text-center">Edit Villa</h3>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group">
+								<label class="profile_details_text">Villa Name:</label>
+								<input type="text" name="villa_name" class="form-control" value="<?= $villa_name?>" required >
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group">
+								<label class="profile_details_text">Villa City: </label>
+								<textarea type="text" name="villa_city" class="form-control" required><?= $villa_city?></textarea>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<div class="form-group">
-							<label class="profile_details_text">Villa City: </label>
-							<textarea type="text" name="villa_city" class="form-control" required><?= $villa_city?></textarea>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit">
+							<div class="form-group">
+								<input type="submit" class="btn btn-success" name="EditVilla" value="Submit">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit">
-						<div class="form-group">
-							<input type="submit" class="btn btn-success" name="EditVilla" value="Submit">
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
+				</form>
+			</div>
+		</div> -->
+
+	<form method="POST" action="">
+        <div class="login-box">
+            <h1>Edit Villa</h1>
+            <div class="textbox">
+                <input type="text" placeholder="Villa Name" name="villa_name" value="">
+            </div>
+
+            <div class="textbox">
+                <input type="text" placeholder="Villa City" name="villa_city" value="">
+            </div>
+
+            <input type="submit" class="btn" name="EditVilla" value="Edit">
+        </div>
+      </form>
     </body>
 </html>

@@ -1,0 +1,70 @@
+h1{
+    text-align: center;
+}
+.villa-list
+{
+    background-color: #dfe6e9;
+    padding: 3em;
+}
+
+.villa-list .card
+{
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0px 5px 5px #b2bec3;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.card .villa_name
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card img
+{
+    padding-bottom: 1em;;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card .villa_city
+{
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.villa_delete
+{
+    background-color: #eb4d4b;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 0.5em;;
+}
+.villa_delete:hover
+{
+    box-shadow: 0px 5px 5px #b2bec3;
+    color: #000000;
+}
+
+.villa_edit
+{
+    background-color: #7cffae;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.villa_edit:hover
+{
+    box-shadow: 0px 5px 5px #000000;
+    color: #94f1b8;
+}
