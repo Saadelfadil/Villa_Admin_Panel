@@ -34,15 +34,15 @@ if (!$_SESSION['password'])
                                             <?= $villa['villa_name']; ?>
                                         </div>
 
-                                        <div class="villa_city">
+                                        <div class="villa_price">
                                             <?= $villa['villa_city']; ?>
                                         </div>
 
-                                        <div class="villa_city">
+                                        <div class="villa_price">
                                             <?= $villa['villa_price']; ?>
                                         </div>
 
-                                        <div class="villa_city">
+                                        <div class="villa_days">
                                             <?= $villa['villa_days']; ?>
                                         </div>
 

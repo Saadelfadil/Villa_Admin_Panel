@@ -21,12 +21,6 @@ h1{
     font-family: 'Poppins';
 }
 
-.card .villa_name
-{
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .card img
 {
     padding-bottom: 1em;
@@ -34,10 +28,26 @@ h1{
     border-radius: 5px;
 }
 
+.card .villa_name
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
 .card .villa_city
 {
-    text-align: left;
-    margin-left: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.card .villa_price
+{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.card .villa_days
+{
+    text-align: center;
     margin-bottom: 1em;
 }
 
@@ -60,7 +70,7 @@ h1{
 
 .villa_edit
 {
-    background-color: #7cffae;
+    background-color: #40bb6f;
     color: white;
     border: none;
     padding: 1em;
@@ -70,7 +80,7 @@ h1{
 .villa_edit:hover
 {
     box-shadow: 0px 5px 5px #000000;
-    color: #94f1b8;
+    color: #000000;
 }
 
 .villa_container
