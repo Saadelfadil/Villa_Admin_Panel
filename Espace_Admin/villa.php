@@ -38,6 +38,14 @@ if (!$_SESSION['password'])
                                             <?= $villa['villa_city']; ?>
                                         </div>
 
+                                        <div class="villa_city">
+                                            <?= $villa['villa_price']; ?>
+                                        </div>
+
+                                        <div class="villa_city">
+                                            <?= $villa['villa_days']; ?>
+                                        </div>
+
                                         <div>
                                             <a href="delete_villa.php?id=<?= $villa['id'];?>">
                                                 <button class="villa_delete">Delete Villa</button>
