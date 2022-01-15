@@ -10,13 +10,14 @@ if (!$_SESSION['password'])
 <html>
     <head>
     <title> Show memebers</title>
-        <meta charset="utf-8">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-      <a href="members.php" > Show All members </a>
-        </br>
-      <a href="add_villa.php" > Add Villa </a>
-      </br>
-      <a href="villa.php" > Show Villa </a>
+    <main>
+      <a href="add_villa.php" >  <button> Add Villa</button></a>
+      <a href="villa.php" >  <button> Show Villa</button></a>
+      <!-- <a href="members.php" > <button><span> Show All members</span></button></a> -->
+    </main>
     </body>
 </html>
