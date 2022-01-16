@@ -17,7 +17,6 @@ if (!$_SESSION['password'])
     <main>
       <a href="add_villa.php" >  <button> Add Villa</button></a>
       <a href="villa.php" >  <button> Show Villa</button></a>
-      <!-- <a href="members.php" > <button><span> Show All members</span></button></a> -->
     </main>
     </body>
 </html>
