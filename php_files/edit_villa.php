@@ -17,14 +17,15 @@ if (isset($_GET['id']) AND !empty($_GET['id']))
 		
 		if (isset($_POST['EditVilla']))
 		{
-			
 			$newVilla_name = htmlspecialchars($_POST['villa_name']);
 			$newVilla_city = nl2br(htmlspecialchars($_POST['villa_city']));
 			$newVilla_price = htmlspecialchars($_POST['villa_price']);
         	$newVilla_days = htmlspecialchars($_POST['villa_days']);
 			$newVilla_pic = time() . '_' . $_FILES['villa_picture']['name'];
 			$newVilla_picture = '../assets/img/' . $newVilla_pic;
-			if (isset($_FILES['villa_picture']))
+            if (empty($_POST['villa_picture']))
+                $newVilla_picture = $villaInfo['villa_picture'];
+			if (!isset($_FILES['villa_picture']))
 				$newVilla_picture = $villaInfo['villa_picture'];
 			else
 				move_uploaded_file($_FILES['villa_picture']['tmp_name'], $newVilla_picture);
