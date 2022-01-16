@@ -14,7 +14,12 @@ if (!$_SESSION['password'])
     </head>
     <body>
         <section class="villa_list">
-            <div><h1>All Villa</h1></div>
+            <div class="logout">
+                <h1>All Villa</h1>
+                <a href="logout.php">
+                    <button class="villa_logout">Logout</button>
+                </a>
+            </div>
             <div class="villa_container">
                 <!-- <?php
                     $myVilla = $bdd->query('SELECT * FROM villa');
