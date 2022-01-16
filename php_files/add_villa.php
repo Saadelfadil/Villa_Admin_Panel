@@ -18,7 +18,7 @@ if (isset($_POST['addVilla']))
         move_uploaded_file($_FILES['villa_picture']['tmp_name'], $villa_picture);
         $addVilla = $bdd->prepare('INSERT INTO villa(villa_picture, villa_name, villa_city, villa_price, villa_days) values(?, ?, ?, ?, ?)');
         $addVilla->execute(array($villa_picture, $villa_name, $villa_city, $villa_price, $villa_days));
-        // echo "Your Villa added succefully";
+        echo "Your Villa added succefully";
     }
     else
         echo "You should fill all inputs";
@@ -32,6 +32,7 @@ if (isset($_POST['addVilla']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/toastr.scss">
     <title>Login page</title>
 </head>
 <body class="container">
@@ -69,11 +70,11 @@ if (isset($_POST['addVilla']))
                 </select>
             </div>
             <div>
-                <label for="">Hüküm ve Koşullar<img src="./resize.png"></label>
+                <label for="">Hüküm ve Koşullar<img src="../assets/img/resize.png"></label>
                 <input type="checkbox">
             </div>
             <div class="button">
-                <button type="submit" name="addVilla">Onayla ve Yolla</button>
+                <button type="submit" name="addVilla" onClick="success_toast()">Onayla ve Yolla</button>
             </div>
         </div>
     </form>

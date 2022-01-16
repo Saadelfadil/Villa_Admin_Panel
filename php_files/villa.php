@@ -24,7 +24,7 @@ if (!$_SESSION['password'])
                             <div class="card">
 
                                 <div class="villa_picture">
-                                    <img src="./<?= $villa['villa_name']; ?>"/>
+                                    <img src="<?= $villa['villa_picture']; ?>"/>
                                 </div>
 
                                 <div class="villa_name">
