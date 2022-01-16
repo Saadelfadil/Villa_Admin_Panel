@@ -11,7 +11,7 @@ if (!$_SESSION['password'])
     <head>
     <title> Show memebers</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     </head>
     <body>
     <main>

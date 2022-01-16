@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 .container {
+    background-color: #181620;
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
@@ -52,7 +53,6 @@ input, textarea{
 
 form {
     background-color: rgb(255, 255, 255);
-    margin-top: clamp(100px,20vw,100px);
     .image {
         justify-content: space-between;
         .images_upload {

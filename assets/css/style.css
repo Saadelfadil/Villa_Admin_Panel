@@ -4,7 +4,7 @@
 
 body { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-top: 20px; }
+header {    margin-bottom: 70px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-top: 20px; }
 
 header button { background: none; border: none; padding: 5px 10px; cursor: pointer; }
 
@@ -14,7 +14,7 @@ header h1 { color: orange; display: -webkit-box; display: -ms-flexbox; display: 
 
 input, textarea { padding: 10px 12px; border-radius: 5px; background-color: #f0f0f0; border: 1px solid #f0f0f0; display: block; width: 100%; }
 
-form { background-color: white; margin-top: clamp(100px, 20vw, 100px); }
+form { background-color: white; }
 
 form .image { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -55,4 +55,5 @@ form .formation .button { display: -webkit-box; display: -ms-flexbox; display: f
 form .formation .button button { background-color: orange; border: 0; border-radius: 7px; color: white; padding: 10px 15px; width: 100%; cursor: pointer; }
 
 form .formation .button button:hover { background-color: #ff9100; }
+.headerForm {margin-top: 0;}
 /*# sourceMappingURL=style.css.map */

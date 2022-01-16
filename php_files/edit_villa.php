@@ -36,7 +36,7 @@ else
     <head>
     <title> Edit Villa</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_1.css">
     </head>
     <body>
 

@@ -12,7 +12,7 @@ if (!$_SESSION['password'])
 <html>
     <head>
     <title> Show members</title>
-        <meta charset="utf-8">
+    <meta charset="utf-8">
     </head>
     <body>
         <?php

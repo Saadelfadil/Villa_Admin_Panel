@@ -28,7 +28,7 @@ if (isset($_POST['submit']))
     <head>
     <title> Villa Administration</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../assets/css/style_1.css">
     </head>
     <body>
       <form method="POST" action="">
