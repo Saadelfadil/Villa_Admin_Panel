@@ -1,6 +1,8 @@
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=espace_admin;', 'root', '');
 $error = "";
+if (isset($_POST['back']))
+    header('Location: villa.php');
 if (isset($_GET['id']) AND !empty($_GET['id']))
 {
 	$getId = $_GET['id'];
