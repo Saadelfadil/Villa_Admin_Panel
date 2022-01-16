@@ -19,7 +19,7 @@ if (isset($_POST['submit']))
             header('location: index.php');
         }
         else
-            $error =  "Wrong Password";
+            $error =  "Wrong Email or Password";
     }
     else
       $error = "Please fill Email and Password";
@@ -39,19 +39,19 @@ if (isset($_POST['submit']))
             <h1>Login</h1>
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="email" name="email" value="" >
+                <input type="text" placeholder="email" name="email" value="" required>
             </div>
 
             <div class="textbox">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="password" name="password" value="" >
+                <input type="password" placeholder="password" name="password" value="" required>
             </div>
 
             <input type="submit" class="btn" name="submit" value="login" >
-            <!-- <?php
+            <?php
                 if (!empty($error))
-                    echo "<h1>". $error ."</h1>"
-            ?> -->
+                    echo "<h4>". $error ."</h4>"
+            ?>
         </div>
       </form>
     </body>

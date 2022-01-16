@@ -51,7 +51,7 @@ if (isset($_POST['addVilla']))
     <form action="" method="post"  enctype="multipart/form-data">
         <div class="image">
             <div class="images_upload">
-                <label for="villa_picture"><img src="../assets/img/camera.png"></label>
+                <label for="villa_picture"><img class="cameraIcon" src="../assets/img/camera.png"></label>
                 <input type="file" name="villa_picture" id="villa_picture" />
             </div>
             <div class="title">
