@@ -1,6 +1,7 @@
 <?php
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=espace_admin;', 'root', '');
+$error = "";
 if (!$_SESSION['password'])
     header('Location: connexion.php');
 if (isset($_POST['back']))
@@ -15,13 +16,16 @@ if (isset($_POST['addVilla']))
         $villa_days = htmlspecialchars($_POST['villa_days']);
         $villa_pic = time() . '_' . $_FILES['villa_picture']['name'];
         $villa_picture = '../assets/img/' . $villa_pic;
-        move_uploaded_file($_FILES['villa_picture']['tmp_name'], $villa_picture);
+        if (empty($_FILES['villa_picture']['name']))
+				$villa_picture = "../assets/img/camera.png";
+        else
+            move_uploaded_file($_FILES['villa_picture']['tmp_name'], $villa_picture);
         $addVilla = $bdd->prepare('INSERT INTO villa(villa_picture, villa_name, villa_city, villa_price, villa_days) values(?, ?, ?, ?, ?)');
         $addVilla->execute(array($villa_picture, $villa_name, $villa_city, $villa_price, $villa_days));
-        echo "Your Villa added succefully";
+        header('Location: villa.php');
     }
     else
-        echo "You should fill all inputs";
+        $error =  "You should fill all inputs";
 }
 ?>
 
@@ -56,10 +60,10 @@ if (isset($_POST['addVilla']))
         </div>
         <div class="formation">
             <h4>Hiç resim seçilmedi</h4>
-            <input type="text" name="villa_name" placeholder="Eşya Adi*">
-            <textarea name="villa_city" id="" cols="30" rows="10" placeholder="Eşya Açiklamasi*"></textarea>
-            <input type="text" name="villa_price" placeholder="Eşyanizin Tahmini Fiyati*">
-            <input type="text" name="villa_days" placeholder="Eşyanizin Gün Sayisi*" >
+            <input type="text" name="villa_name" placeholder="Eşya Adi*" required>
+            <textarea name="villa_city" id="" cols="30" rows="10" placeholder="Eşya Açiklamasi*" required></textarea>
+            <input type="number" name="villa_price" placeholder="Eşyanizin Tahmini Fiyati*" required>
+            <input type="number" name="villa_days" placeholder="Eşyanizin Gün Sayisi*" required>
             <div class="select">
                 <select name="" id="">
                     <option value="">Giyim</option>
@@ -76,6 +80,10 @@ if (isset($_POST['addVilla']))
             <div class="button">
                 <button type="submit" name="addVilla" onClick="success_toast()">Onayla ve Yolla</button>
             </div>
+            <!-- <?php
+                if (!empty($error))
+                    echo "<h1>". $error ."</h1>"
+            ?> -->
         </div>
     </form>
 </body>

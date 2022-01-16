@@ -1,5 +1,6 @@
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=espace_admin;', 'root', '');
+$error = "";
 if (isset($_GET['id']) AND !empty($_GET['id']))
 {
 	$getId = $_GET['id'];
@@ -23,7 +24,7 @@ if (isset($_GET['id']) AND !empty($_GET['id']))
         	$newVilla_days = htmlspecialchars($_POST['villa_days']);
 			$newVilla_pic = time() . '_' . $_FILES['villa_picture']['name'];
 			$newVilla_picture = '../assets/img/' . $newVilla_pic;
-			if (empty($_FILES['villa_picture']))
+			if (isset($_FILES['villa_picture']))
 				$newVilla_picture = $villaInfo['villa_picture'];
 			else
 				move_uploaded_file($_FILES['villa_picture']['tmp_name'], $newVilla_picture);
@@ -33,10 +34,10 @@ if (isset($_GET['id']) AND !empty($_GET['id']))
 		}
 	}
 	else
-		echo "There are no Villa";
+        $error =  "There are no Villa";
 }
 else
-	echo "Villa not found";
+    $error = "Villa not found";
 ?>
 
 <!DOCTYPE html>
@@ -72,8 +73,8 @@ else
             <h4>Hiç resim seçilmedi</h4>
             <input type="text" name="villa_name" placeholder="Eşya Adi*" value="<?= $villa_name?>">
             <textarea name="villa_city" id="" cols="30" rows="10" placeholder="Eşya Açiklamasi*"><?= $villa_city?></textarea>
-            <input type="text" name="villa_price" placeholder="Eşyanizin Tahmini Fiyati*" value="<?= $villa_price?>">
-            <input type="text" name="villa_days" placeholder="Eşyanizin Gün Sayisi*" value="<?= $villa_days?>">
+            <input type="number" name="villa_price" placeholder="Eşyanizin Tahmini Fiyati*" value="<?= $villa_price?>">
+            <input type="number" name="villa_days" placeholder="Eşyanizin Gün Sayisi*" value="<?= $villa_days?>">
             <div class="select">
                 <select name="" id="">
                     <option value="">Giyim</option>
@@ -90,6 +91,10 @@ else
             <div class="button">
                 <button type="submit" name="EditVilla">Onayla ve Yolla</button>
             </div>
+            <!-- <?php
+                if (!empty($error))
+                    echo "<h1>". $error ."</h1>"
+            ?> -->
         </div>
     </form>
 </body>
